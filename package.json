@@ -10,7 +10,7 @@
   "scripts": {
     "start": "node src/server.js",
     "build": "tsc",
-    "postinstall": "yarn build"
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@prisma/client": "3.2.1",
