@@ -1,4 +1,3 @@
 import { serverHttp } from "./app";
-import 'dotenv/config';
 
-serverHttp.listen(process.env.PORT || 3000);
+serverHttp.listen(process.env.PORT || 4000, () => console.log('Server is running on PORT 4000'));
