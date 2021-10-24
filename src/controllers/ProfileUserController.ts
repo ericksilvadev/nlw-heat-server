@@ -11,6 +11,6 @@ class ProfileUserController {
 
     return response.json(result);
   }
-}
+};
 
 export { ProfileUserController };

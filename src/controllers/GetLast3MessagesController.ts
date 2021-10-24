@@ -9,6 +9,6 @@ class GetLast3MessagesController {
 
     return response.json(result);
   }
-}
+};
 
 export { GetLast3MessagesController };

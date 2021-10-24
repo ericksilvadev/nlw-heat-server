@@ -12,6 +12,6 @@ class CreateMessageController {
 
     return response.json(result);
   }
-}
+};
 
 export { CreateMessageController };

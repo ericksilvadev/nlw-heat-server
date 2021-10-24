@@ -21,7 +21,7 @@ class CreateMessageService {
         name: message.user.name,
         avatar_url: message.user.avatar_url,
       }
-    }
+    };
 
     io.emit('new_message', infoWS)
 

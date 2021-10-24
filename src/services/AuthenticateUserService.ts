@@ -1,6 +1,6 @@
 import axios from 'axios';
 import prismaClient from '../prisma';
-import { sign } from "jsonwebtoken";
+import { sign } from 'jsonwebtoken';
 
 interface IAccessTokenResponse {
   access_token: string;
@@ -40,7 +40,7 @@ class AuthenticateUserService {
       where: {
         github_id: id,
       }
-    })
+    });
 
     if(!user) {
       user = await prismaClient.user.create({
@@ -50,7 +50,7 @@ class AuthenticateUserService {
           avatar_url,
           name,
         }
-      })
+      });
     }
 
     const token = sign(
@@ -64,7 +64,7 @@ class AuthenticateUserService {
         subject: user.id,
         expiresIn: '1d'
       }
-    )
+    );
 
     return { token, user };
   }

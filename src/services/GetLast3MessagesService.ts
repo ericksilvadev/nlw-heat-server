@@ -10,7 +10,7 @@ class GetLast3MessagesService {
       include: {
         user: true
       }
-    })
+    });
 
     return messages;
   }

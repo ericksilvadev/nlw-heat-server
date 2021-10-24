@@ -6,7 +6,7 @@ class ProfileUserService {
       where: {
         id: user_id,
       }
-    })
+    });
 
     return user;
   }
