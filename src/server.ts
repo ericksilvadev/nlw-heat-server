@@ -1,3 +1,5 @@
 import { serverHttp } from './app';
 
-serverHttp.listen(process.env.PORT || 4000);
+serverHttp.listen(process.env.PORT || 4000, () =>
+  console.log(`running on port ${process.env.PORT}`)
+);
