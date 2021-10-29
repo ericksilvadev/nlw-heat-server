@@ -7,9 +7,17 @@ import { ensureAuthenticate } from './middleware/ensureAuthenticate';
 
 const router = Router();
 
+router.get('/', (_req, res) => {
+  res.json({ connection: 'connected' });
+});
+
 router.post('/authenticate', new AuthenticateUserController().handle);
 
-router.post('/messages', ensureAuthenticate, new CreateMessageController().handle);
+router.post(
+  '/messages',
+  ensureAuthenticate,
+  new CreateMessageController().handle
+);
 
 router.get('/messages/last3', new GetLast3MessagesController().handle);
 
