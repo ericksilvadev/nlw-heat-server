@@ -1,5 +1,6 @@
 import axios from 'axios';
 import prismaClient from '../prisma';
+import 'dotenv/config';
 import { sign } from 'jsonwebtoken';
 
 interface IAccessTokenResponse {
